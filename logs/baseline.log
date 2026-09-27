@@ -1,0 +1,2 @@
+2026-09-25 19:47:33,834 | INFO     | tx=T001 amount=12000 status=OK
+2026-09-25 19:47:33,834 | CRITICAL | tx=T002 error=NetworkError msg='T002: connection to bank gateway lost' -> processor stopped

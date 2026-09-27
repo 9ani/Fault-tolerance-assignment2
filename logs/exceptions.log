@@ -1,0 +1,15 @@
+2026-09-25 19:47:33,835 | INFO     | tx=T001 amount=12000 status=OK
+2026-09-25 19:47:33,835 | ERROR    | tx=T002 failure=Network error=NetworkError kind=transient action=skip msg='T002: connection to bank gateway lost'
+2026-09-25 19:47:33,835 | INFO     | tx=T003 amount=8000 status=OK
+2026-09-25 19:47:33,835 | ERROR    | tx=T004 failure=Timeout error=GatewayTimeout kind=transient action=skip msg='T004: bank gateway did not answer in time'
+2026-09-25 19:47:33,835 | INFO     | tx=T005 amount=13000 status=OK
+2026-09-25 19:47:33,835 | ERROR    | tx=T006 failure=Database error=DatabaseError kind=persistent action=skip msg='T006: payment record was not saved'
+2026-09-25 19:47:33,835 | INFO     | tx=T007 amount=9000 status=OK
+2026-09-25 19:47:33,835 | ERROR    | tx=T008 failure=Network error=NetworkError kind=transient action=skip msg='T008: connection to bank gateway lost'
+2026-09-25 19:47:33,835 | INFO     | tx=T009 amount=15000 status=OK
+2026-09-25 19:47:33,836 | ERROR    | tx=T010 failure=Timeout error=GatewayTimeout kind=transient action=skip msg='T010: bank gateway did not answer in time'
+2026-09-25 19:47:33,836 | INFO     | tx=T011 amount=6000 status=OK
+2026-09-25 19:47:33,836 | ERROR    | tx=T012 failure=Database error=DatabaseError kind=persistent action=skip msg='T012: payment record was not saved'
+2026-09-25 19:47:33,836 | INFO     | tx=T013 amount=11000 status=OK
+2026-09-25 19:47:33,836 | INFO     | tx=T014 amount=22000 status=OK
+2026-09-25 19:47:33,836 | ERROR    | tx=T015 failure=Network error=NetworkError kind=transient action=skip msg='T015: connection to bank gateway lost'

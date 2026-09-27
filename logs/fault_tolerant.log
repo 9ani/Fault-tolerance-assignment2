@@ -1,0 +1,31 @@
+2026-09-25 19:47:33,836 | INFO     | tx=T001 attempt=1 amount=12000 status=OK
+2026-09-25 19:47:33,836 | WARNING  | tx=T002 attempt=1 error=NetworkError -> retry
+2026-09-25 19:47:33,937 | INFO     | tx=T002 attempt=2 amount=25000 status=OK
+2026-09-25 19:47:33,938 | INFO     | tx=T003 attempt=1 amount=8000 status=OK
+2026-09-25 19:47:33,938 | WARNING  | tx=T004 attempt=1 error=GatewayTimeout -> retry
+2026-09-25 19:47:34,039 | WARNING  | tx=T004 attempt=2 error=GatewayTimeout -> retry
+2026-09-25 19:47:34,240 | INFO     | tx=T004 attempt=3 amount=45000 status=OK
+2026-09-25 19:47:34,240 | INFO     | tx=T005 attempt=1 amount=13000 status=OK
+2026-09-25 19:47:34,242 | INFO     | CHECKPOINT CP1 successful=5 total=103000 reason=5 successful
+2026-09-25 19:47:34,242 | WARNING  | tx=T006 attempt=1 error=DatabaseError -> retry
+2026-09-25 19:47:34,343 | WARNING  | tx=T006 attempt=2 error=DatabaseError -> retry
+2026-09-25 19:47:34,544 | ERROR    | tx=T006 attempt=3 error=DatabaseError retries exhausted
+2026-09-25 19:47:34,544 | ERROR    | ROLLBACK tx=T006 to=CP1 ledger 313000 -> 103000 dropped=[]
+2026-09-25 19:47:34,545 | INFO     | tx=T007 attempt=1 amount=9000 status=OK
+2026-09-25 19:47:34,545 | WARNING  | tx=T008 attempt=1 error=NetworkError -> retry
+2026-09-25 19:47:34,646 | INFO     | tx=T008 attempt=2 amount=31000 status=OK
+2026-09-25 19:47:34,646 | INFO     | tx=T009 attempt=1 amount=15000 status=OK
+2026-09-25 19:47:34,646 | WARNING  | tx=T010 attempt=1 error=GatewayTimeout -> retry
+2026-09-25 19:47:34,747 | WARNING  | tx=T010 attempt=2 error=GatewayTimeout -> retry
+2026-09-25 19:47:34,948 | INFO     | tx=T010 attempt=3 amount=50000 status=OK
+2026-09-25 19:47:34,949 | INFO     | tx=T011 attempt=1 amount=6000 status=OK
+2026-09-25 19:47:34,950 | INFO     | CHECKPOINT CP2 successful=10 total=214000 reason=5 successful
+2026-09-25 19:47:34,951 | WARNING  | tx=T012 attempt=1 error=DatabaseError -> retry
+2026-09-25 19:47:35,052 | WARNING  | tx=T012 attempt=2 error=DatabaseError -> retry
+2026-09-25 19:47:35,253 | ERROR    | tx=T012 attempt=3 error=DatabaseError retries exhausted
+2026-09-25 19:47:35,253 | ERROR    | ROLLBACK tx=T012 to=CP2 ledger 454000 -> 214000 dropped=[]
+2026-09-25 19:47:35,253 | INFO     | tx=T013 attempt=1 amount=11000 status=OK
+2026-09-25 19:47:35,254 | INFO     | tx=T014 attempt=1 amount=22000 status=OK
+2026-09-25 19:47:35,254 | WARNING  | tx=T015 attempt=1 error=NetworkError -> retry
+2026-09-25 19:47:35,356 | INFO     | tx=T015 attempt=2 amount=40000 status=OK
+2026-09-25 19:47:35,357 | INFO     | CHECKPOINT CP3 successful=13 total=287000 reason=end of batch

@@ -1,0 +1,414 @@
+{
+  "baseline": {
+    "attempted": 2,
+    "successful": 1,
+    "failed": 14,
+    "processed_amount": 12000,
+    "lost_amount": 425000,
+    "ledger_total": 12000,
+    "completion_rate": 6.67,
+    "done": [
+      "T001"
+    ]
+  },
+  "exceptions": {
+    "attempted": 15,
+    "successful": 8,
+    "failed": 7,
+    "processed_amount": 96000,
+    "lost_amount": 341000,
+    "ledger_total": 246000,
+    "completion_rate": 53.33,
+    "done": [
+      "T001",
+      "T003",
+      "T005",
+      "T007",
+      "T009",
+      "T011",
+      "T013",
+      "T014"
+    ],
+    "failures": [
+      {
+        "tx": "T002",
+        "failure": "Network",
+        "error": "NetworkError",
+        "kind": "transient",
+        "status": "FAILED"
+      },
+      {
+        "tx": "T004",
+        "failure": "Timeout",
+        "error": "GatewayTimeout",
+        "kind": "transient",
+        "status": "FAILED"
+      },
+      {
+        "tx": "T006",
+        "failure": "Database",
+        "error": "DatabaseError",
+        "kind": "persistent",
+        "status": "FAILED"
+      },
+      {
+        "tx": "T008",
+        "failure": "Network",
+        "error": "NetworkError",
+        "kind": "transient",
+        "status": "FAILED"
+      },
+      {
+        "tx": "T010",
+        "failure": "Timeout",
+        "error": "GatewayTimeout",
+        "kind": "transient",
+        "status": "FAILED"
+      },
+      {
+        "tx": "T012",
+        "failure": "Database",
+        "error": "DatabaseError",
+        "kind": "persistent",
+        "status": "FAILED"
+      },
+      {
+        "tx": "T015",
+        "failure": "Network",
+        "error": "NetworkError",
+        "kind": "transient",
+        "status": "FAILED"
+      }
+    ]
+  },
+  "fault_tolerant": {
+    "attempted": 15,
+    "successful": 13,
+    "failed": 2,
+    "processed_amount": 287000,
+    "lost_amount": 150000,
+    "ledger_total": 287000,
+    "completion_rate": 86.67,
+    "done": [
+      "T001",
+      "T002",
+      "T003",
+      "T004",
+      "T005",
+      "T007",
+      "T008",
+      "T009",
+      "T010",
+      "T011",
+      "T013",
+      "T014",
+      "T015"
+    ],
+    "retries": 11,
+    "rollbacks": 2,
+    "checkpoints": [
+      {
+        "name": "CP1",
+        "time": "19:47:34.241",
+        "reason": "5 successful",
+        "state": {
+          "done": [
+            "T001",
+            "T002",
+            "T003",
+            "T004",
+            "T005"
+          ],
+          "total": 103000
+        }
+      },
+      {
+        "name": "CP2",
+        "time": "19:47:34.949",
+        "reason": "5 successful",
+        "state": {
+          "done": [
+            "T001",
+            "T002",
+            "T003",
+            "T004",
+            "T005",
+            "T007",
+            "T008",
+            "T009",
+            "T010",
+            "T011"
+          ],
+          "total": 214000
+        }
+      },
+      {
+        "name": "CP3",
+        "time": "19:47:35.356",
+        "reason": "end of batch",
+        "state": {
+          "done": [
+            "T001",
+            "T002",
+            "T003",
+            "T004",
+            "T005",
+            "T007",
+            "T008",
+            "T009",
+            "T010",
+            "T011",
+            "T013",
+            "T014",
+            "T015"
+          ],
+          "total": 287000
+        }
+      }
+    ],
+    "attempts": [
+      {
+        "step": 1,
+        "time": "19:47:33.836",
+        "tx": "T001",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 2,
+        "time": "19:47:33.836",
+        "tx": "T002",
+        "attempt": 1,
+        "failure": "NetworkError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 3,
+        "time": "19:47:33.937",
+        "tx": "T002",
+        "attempt": 2,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 4,
+        "time": "19:47:33.938",
+        "tx": "T003",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 5,
+        "time": "19:47:33.938",
+        "tx": "T004",
+        "attempt": 1,
+        "failure": "GatewayTimeout",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 6,
+        "time": "19:47:34.039",
+        "tx": "T004",
+        "attempt": 2,
+        "failure": "GatewayTimeout",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 7,
+        "time": "19:47:34.240",
+        "tx": "T004",
+        "attempt": 3,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 8,
+        "time": "19:47:34.240",
+        "tx": "T005",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 9,
+        "time": "19:47:34.242",
+        "tx": "T006",
+        "attempt": 1,
+        "failure": "DatabaseError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 10,
+        "time": "19:47:34.343",
+        "tx": "T006",
+        "attempt": 2,
+        "failure": "DatabaseError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 11,
+        "time": "19:47:34.544",
+        "tx": "T006",
+        "attempt": 3,
+        "failure": "DatabaseError",
+        "action": "rollback to CP1",
+        "result": "rolled back"
+      },
+      {
+        "step": 12,
+        "time": "19:47:34.545",
+        "tx": "T007",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 13,
+        "time": "19:47:34.545",
+        "tx": "T008",
+        "attempt": 1,
+        "failure": "NetworkError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 14,
+        "time": "19:47:34.646",
+        "tx": "T008",
+        "attempt": 2,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 15,
+        "time": "19:47:34.646",
+        "tx": "T009",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 16,
+        "time": "19:47:34.646",
+        "tx": "T010",
+        "attempt": 1,
+        "failure": "GatewayTimeout",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 17,
+        "time": "19:47:34.747",
+        "tx": "T010",
+        "attempt": 2,
+        "failure": "GatewayTimeout",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 18,
+        "time": "19:47:34.948",
+        "tx": "T010",
+        "attempt": 3,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 19,
+        "time": "19:47:34.949",
+        "tx": "T011",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 20,
+        "time": "19:47:34.951",
+        "tx": "T012",
+        "attempt": 1,
+        "failure": "DatabaseError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 21,
+        "time": "19:47:35.052",
+        "tx": "T012",
+        "attempt": 2,
+        "failure": "DatabaseError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 22,
+        "time": "19:47:35.253",
+        "tx": "T012",
+        "attempt": 3,
+        "failure": "DatabaseError",
+        "action": "rollback to CP2",
+        "result": "rolled back"
+      },
+      {
+        "step": 23,
+        "time": "19:47:35.253",
+        "tx": "T013",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 24,
+        "time": "19:47:35.254",
+        "tx": "T014",
+        "attempt": 1,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      },
+      {
+        "step": 25,
+        "time": "19:47:35.254",
+        "tx": "T015",
+        "attempt": 1,
+        "failure": "NetworkError",
+        "action": "retry",
+        "result": "fail"
+      },
+      {
+        "step": 26,
+        "time": "19:47:35.355",
+        "tx": "T015",
+        "attempt": 2,
+        "failure": "-",
+        "action": "commit",
+        "result": "success"
+      }
+    ]
+  },
+  "comparison": {
+    "extra_successful": 12,
+    "completion_gain_pp": 80.0,
+    "recovered_faulty": "5/7",
+    "recovery_rate_pct": 71.43,
+    "loss_reduction_count_pct": 85.71,
+    "loss_reduction_amount_pct": 64.71
+  }
+}

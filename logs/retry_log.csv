@@ -1,0 +1,27 @@
+step,time,tx,attempt,failure,action,result
+1,19:47:33.836,T001,1,-,commit,success
+2,19:47:33.836,T002,1,NetworkError,retry,fail
+3,19:47:33.937,T002,2,-,commit,success
+4,19:47:33.938,T003,1,-,commit,success
+5,19:47:33.938,T004,1,GatewayTimeout,retry,fail
+6,19:47:34.039,T004,2,GatewayTimeout,retry,fail
+7,19:47:34.240,T004,3,-,commit,success
+8,19:47:34.240,T005,1,-,commit,success
+9,19:47:34.242,T006,1,DatabaseError,retry,fail
+10,19:47:34.343,T006,2,DatabaseError,retry,fail
+11,19:47:34.544,T006,3,DatabaseError,rollback to CP1,rolled back
+12,19:47:34.545,T007,1,-,commit,success
+13,19:47:34.545,T008,1,NetworkError,retry,fail
+14,19:47:34.646,T008,2,-,commit,success
+15,19:47:34.646,T009,1,-,commit,success
+16,19:47:34.646,T010,1,GatewayTimeout,retry,fail
+17,19:47:34.747,T010,2,GatewayTimeout,retry,fail
+18,19:47:34.948,T010,3,-,commit,success
+19,19:47:34.949,T011,1,-,commit,success
+20,19:47:34.951,T012,1,DatabaseError,retry,fail
+21,19:47:35.052,T012,2,DatabaseError,retry,fail
+22,19:47:35.253,T012,3,DatabaseError,rollback to CP2,rolled back
+23,19:47:35.253,T013,1,-,commit,success
+24,19:47:35.254,T014,1,-,commit,success
+25,19:47:35.254,T015,1,NetworkError,retry,fail
+26,19:47:35.355,T015,2,-,commit,success
